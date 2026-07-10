@@ -59,7 +59,6 @@ class WPFM_Admin {
 			true
 		);
 
-		// Enqueue built-in CodeMirror (WordPress core)
 		wp_enqueue_code_editor( array( 'type' => 'text/plain' ) );
 
 		wp_localize_script(
