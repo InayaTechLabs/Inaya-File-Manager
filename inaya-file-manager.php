@@ -43,7 +43,6 @@ require_once WPFM_PLUGIN_DIR . 'admin/class-wpfm-admin.php';
  * Activation hook.
  */
 function wpfm_activate() {
-	// Reserve for future setup (options, capabilities, etc.).
 	if ( ! get_option( 'wpfm_settings' ) ) {
 		add_option(
 			'wpfm_settings',
@@ -61,9 +60,7 @@ register_activation_hook( __FILE__, 'wpfm_activate' );
 /**
  * Deactivation hook.
  */
-function wpfm_deactivate() {
-	// Intentionally left blank – keep user data on deactivation.
-}
+function wpfm_deactivate() {}
 register_deactivation_hook( __FILE__, 'wpfm_deactivate' );
 
 /**
