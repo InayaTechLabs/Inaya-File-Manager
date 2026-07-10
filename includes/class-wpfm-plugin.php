@@ -2,15 +2,21 @@
 /**
  * Main plugin bootstrap class.
  *
- * @package Inaya_File_Manager
+ * @package WP_File_Manager
  */
 
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+/**
+ * Class WPFM_Plugin
+ */
 class WPFM_Plugin {
 
+	/**
+	 * Register hooks.
+	 */
 	public function run() {
 		$admin = new WPFM_Admin();
 		$admin->register_hooks();
